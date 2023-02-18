@@ -30,5 +30,3 @@ I've created a zero-spend budget alarm beside to my old budget alarm which was c
 
 ![Budget alarm proof](Assets/Budget.png)
 
-### Create a Billing Alarm 
-
