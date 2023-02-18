@@ -23,9 +23,12 @@ sudo ./aws/install
 
 ```
 
-### Create a Billing Alarm 
-
-
-
 
 ### Create a Budget
+
+I've created a zero-spend budget alarm beside to my old budget alarm which was created before 
+
+![Budget alarm proof](Assets/Budget.png)
+
+### Create a Billing Alarm 
+
