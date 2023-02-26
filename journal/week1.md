@@ -27,14 +27,17 @@ FROM python:3.10-slim-buster
 
 # Inside Container 
 # Make a new folder inside the container
+
 WORKDIR /backend-flask
 
 # Outside Container -> Inside Container
 #this contains the librairies want to install to run the app
+
 COPY requirements.txt requirements.txt
 
 # Inside Container 
 # install the python libraries used for the app
+
 RUN pip3 install -r requirements.txt
 
 
@@ -42,6 +45,7 @@ RUN pip3 install -r requirements.txt
 # . means everything in the current directory
 # First period . - /backend-flask (outside container)
 # Second period . - /backend-flask (insid container)
+
 COPY . .
 
 
