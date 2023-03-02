@@ -215,7 +215,7 @@ import NotificationsFeedPage from "./pages/NotificationsFeedPage";
 
 - Test the notification menu
 
-![NOTIFICATION SCREEN](../assets/week1/notification-screen.png)
+![NOTIFICATION FeedPage](../_docs/assets/NotificationsFeedPage.png)
 
 ## Run DynamoDB Local Container and ensure it works
 
