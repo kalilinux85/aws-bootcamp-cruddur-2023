@@ -264,5 +264,5 @@ To install Postgres client into Gitpod
       sudo apt update
       sudo apt install -y postgresql-client-13 libpq-dev
  ```
- 
+ ![Postgres](../_docs/assets/postgres.png)
  
