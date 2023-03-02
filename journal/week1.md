@@ -137,13 +137,16 @@ networks:
     name: cruddur
 ```
 
-- Run multiples Container
+- Run multiples Containers
 
 ```sh
 docker compose -f "docker-compose.yml" up -d --build
 ```
 
-- Stop multiples Container
+  ![Docker compose up](../_docs/assets/DockerComposeUp.png)
+
+
+- Stop multiples Containers
 
 ```sh
 docker compose -f "docker-compose.yml" down
@@ -173,7 +176,7 @@ docker compose -f "docker-compose.yml" down
 
 - Documetantion generated
 
-  ![API DOCUMENTATION](../assets/week1/api-notification-doc.png)
+
 
 ## Write a Flask Backend Endpoint for Notifications
 
