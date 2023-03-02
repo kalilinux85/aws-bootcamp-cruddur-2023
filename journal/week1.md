@@ -173,11 +173,6 @@ docker compose -f "docker-compose.yml" down
               items:
                 $ref: "#/components/schemas/Activity"
 ```
-
-- Documetantion generated
-
-
-
 ## Write a Flask Backend Endpoint for Notifications
 
 - Create the notification end point on app.py
