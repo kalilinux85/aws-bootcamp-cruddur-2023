@@ -194,7 +194,7 @@ from services.notifications_activities import *
 
 - Test the new endpoint
 
-![NOTIFICATION ENDPOINT](../assets/week1/backend-new-endpoint.png)
+![NOTIFICATIONs](../_docs/assets/notificationsActivitiesProof.png)
 
 ## Write a React Page for Notifications
 
