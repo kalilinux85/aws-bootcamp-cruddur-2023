@@ -219,7 +219,7 @@ import NotificationsFeedPage from "./pages/NotificationsFeedPage";
 
 ## Run DynamoDB Local Container and ensure it works
 
-```
+```yaml
 services:
   dynamodb-local:
     # https://stackoverflow.com/questions/67533058/persist-local-dynamodb-data-in-volumes-lack-permission-unable-to-open-databa
@@ -238,7 +238,7 @@ services:
 
 
 ## Run Postgres Container and ensure it works
-```
+```yaml
 services:
   db:
     image: postgres:13-alpine
@@ -254,3 +254,15 @@ volumes:
   db:
     driver: local
 ```
+To install Postgres client into Gitpod
+
+```sh
+  - name: postgres
+    init: |
+      curl -fsSL https://www.postgresql.org/media/keys/ACCC4CF8.asc|sudo gpg --dearmor -o /etc/apt/trusted.gpg.d/postgresql.gpg
+      echo "deb http://apt.postgresql.org/pub/repos/apt/ `lsb_release -cs`-pgdg main" |sudo tee  /etc/apt/sources.list.d/pgdg.list
+      sudo apt update
+      sudo apt install -y postgresql-client-13 libpq-dev
+ ```
+ 
+ 
