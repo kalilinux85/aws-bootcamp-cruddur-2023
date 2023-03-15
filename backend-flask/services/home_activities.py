@@ -58,6 +58,6 @@ class HomeActivities:
       'likes': 0,
       'replies': []
       }
-    results
-    .insert(0,extra_crud)
+      results.insert(0,extra_crud)
+
     return results
