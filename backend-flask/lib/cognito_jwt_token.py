@@ -5,10 +5,11 @@ from jose.exceptions import JOSEError
 from jose.utils import base64url_decode
 
 class FlaskAWSCognitoError(Exception):
-    pass
+  pass
 
 class TokenVerifyError(Exception):
-    pass
+  pass
+
 def extract_access_token(request_headers):
     access_token = None
     auth_header = request_headers.get("Authorization")
@@ -30,13 +31,14 @@ class CognitoJwtToken:
             self.request_client = request_client
         self._load_jwk_keys()
 
-def _load_jwk_keys(self):
-    keys_url = f"https://cognito-idp.{self.region}.amazonaws.com/{self.user_pool_id}/.well-known/jwks.json"
-    try:
-        response = self.request_client(keys_url)
-        self.jwk_keys = response.json()["keys"]
-    except requests.exceptions.RequestException as e:
-        raise FlaskAWSCognitoError(str(e)) from e
+
+    def _load_jwk_keys(self):
+        keys_url = f"https://cognito-idp.{self.region}.amazonaws.com/{self.user_pool_id}/.well-known/jwks.json"
+        try:
+            response = self.request_client(keys_url)
+            self.jwk_keys = response.json()["keys"]
+        except requests.exceptions.RequestException as e:
+            raise FlaskAWSCognitoError(str(e)) from e
 
     @staticmethod
     def _extract_headers(token):
@@ -108,5 +110,5 @@ def _load_jwk_keys(self):
         self._check_expiration(claims, current_time)
         self._check_audience(claims)
 
-        self.claims = claims
+        self.claims = claims 
         return claims
