@@ -46,8 +46,7 @@ provider.add_span_processor(processor)
 
 ```
 
-
-- Testing this works... within my `frontend-react-js` directory, I did an `npm install` then cd'd one level back and then `docker compose up` to start both the frontend & backend apps.
+ ![Honeycomb proof](../_docs/assets/honeycomb%20proof.png)
 
 
 ## X-Ray
@@ -155,3 +154,6 @@ We need to add these two env vars to our backend-flask in our `docker-compose.ym
 EPOCH=$(date +%s)
 aws xray get-service-graph --start-time $(($EPOCH-600)) --end-time $EPOCH
 ```
+![x-RAY PROOF](../_docs/assets/Xray%20segmentation%20mock%20data.png)
+![x-RAY PROOF subsegment](../_docs/assets/subsegment%20xray.png)
+
