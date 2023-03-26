@@ -1,5 +1,6 @@
 import uuid
 from datetime import datetime, timedelta, timezone
+import sys
 from lib.db import db
 class CreateActivity:
   def run(message, user_handle, ttl):
@@ -42,7 +43,7 @@ class CreateActivity:
       }   
     else:
       expires_at = (now + ttl_offset)
-      create_activity(user_handle,messgae,expires_at)
+      CreateActivity.create_activity(user_handle,message,expires_at)
       model['data'] = {
         'uuid': uuid.uuid4(),
         'display_name': 'Andrew Brown',
@@ -67,7 +68,7 @@ class CreateActivity:
       %(expires_at)s,
     ) RETURNING uuid;
     """
-    uuid = db.query_commit_with_returning_id(sql,
+    uuid = db.query_commit_id(sql,
       handle=handle,
       message=message,
       expires_at=expires_at

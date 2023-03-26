@@ -9,7 +9,7 @@ class Db:
     connection_url = os.getenv("CONNECTION_URL")
     self.pool = ConnectionPool(connection_url)
   # when we want to commit data such as an insert
-  def query_commit_with_returning_id(self,sql,*kwargs):
+  def query_commit_id(self,sql,**kwargs):
     print("SQL STATEMENT-[commit-with-returning-id]--------")
     try:
      conn = self.pool.connection()
